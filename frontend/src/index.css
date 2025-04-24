@@ -1,0 +1,203 @@
+/* Reset some basic elements */
+body, h1, h2, h3, h4, h5, h6, p, ul {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Set global background and text color */
+  body {
+    background-color: #f9fafb;
+    color: #111827;
+    font-size: 16px;
+  }
+  
+  /* Basic link styling */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Utility styles for spacing */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
+  /* Button Styles */
+  button {
+    padding: 0.75rem 1.25rem;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: #1d4ed8;
+    transform: scale(1.05);
+  }
+  
+  button:disabled {
+    background-color: #d1d5db;
+    cursor: not-allowed;
+  }
+  
+  /* Input and select styling */
+  input, select, textarea {
+    outline: none;
+    border: 1px solid #d1d5db;
+    padding: 0.75rem;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    width: 100%;
+  }
+  
+  input:focus, select:focus, textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.3);
+  }
+  
+  /* Form containers */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  /* Header and Title Styles */
+  h1, h2, h3, h4, h5, h6 {
+    color: #111827;
+  }
+  
+  /* Page Layout */
+  .page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+  
+  /* Centered Card Layout */
+  .card {
+    max-width: 400px;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    width: 100%;
+    margin-top: 1rem;
+  }
+  
+  /* Flexbox Utility */
+  .flex {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  
+  .flex-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  /* Form Labels */
+  label {
+    font-size: 1rem;
+    color: #4b5563;
+    font-weight: 600;
+  }
+  
+  /* Vehicle options (Checkboxes) */
+  .flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .flex-wrap label {
+    display: flex;
+    align-items: center;
+  }
+  
+  .flex-wrap input {
+    margin-right: 0.5rem;
+  }
+  
+  /* Hero section (for home page) */
+  .hero {
+    background-color: #2563eb;
+    color: white;
+    padding: 5rem 0;
+    text-align: center;
+    border-radius: 0 0 1rem 1rem;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  
+  /* Ride Request Form */
+  .ride-form {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 1rem auto;
+  }
+  
+  .ride-form input, .ride-form select {
+    margin-bottom: 1rem;
+  }
+  
+  .ride-form button {
+    background-color: #4CAF50;
+    padding: 1rem;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 0.375rem;
+    width: 100%;
+  }
+  
+  .ride-form button:hover {
+    background-color: #45a049;
+  }
+  
+  /* General Card Styles for Dashboards */
+  .dashboard-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Mobile Responsive Styles */
+  @media (max-width: 768px) {
+    .container {
+      padding: 0.5rem;
+    }
+  
+    .hero h1 {
+      font-size: 2rem;
+    }
+  
+    .ride-form {
+      padding: 1rem;
+    }
+  
+    .flex {
+      flex-direction: column;
+    }
+  }
+  
