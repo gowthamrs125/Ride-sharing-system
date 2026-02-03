@@ -33,19 +33,19 @@ public class AuthController {
         if (!isValidLoginField(loginField)) {
             return ResponseEntity.badRequest().body("Enter a valid name or phone number.");
         }
-    
+
         Optional<User> userOptional = userService.getByNameOrPhone(loginField);
-    
+
         if (userOptional.isPresent()) {
             User user = userOptional.get();
             if (user.getPassword().equals(password)) {
                 return ResponseEntity.ok(user);
             }
         }
-    
+
         return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid name or password");
     }
-    
+
     private boolean isValidLoginField(String loginField) {
         // If it's a phone number
         if (loginField.matches("^[6-9]\\d{9}$")) {

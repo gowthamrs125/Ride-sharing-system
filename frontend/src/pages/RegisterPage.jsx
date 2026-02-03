@@ -7,7 +7,7 @@ export default function RegisterPage() {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [password, setPassword] = useState('');
-  const [role, setRole] = useState('USER');
+  const [role, setRole] = useState('User');
   const [selectedVehicles, setSelectedVehicles] = useState([]);
   const [errors, setErrors] = useState({});
   const navigate = useNavigate();
@@ -33,7 +33,7 @@ export default function RegisterPage() {
     if (password.length < 6) {
       errors.password = "Password must be at least 6 characters.";
     }
-    if (role === 'DRIVER' && selectedVehicles.length === 0) {
+    if (role === 'Driver' && selectedVehicles.length === 0) {
       errors.vehicles = "Please select at least one vehicle.";
     }
     setErrors(errors);
@@ -49,7 +49,7 @@ export default function RegisterPage() {
       phone,
       password,
       role,
-      vehicles: role === 'DRIVER' ? selectedVehicles : []
+      vehicles: role === 'Driver' ? selectedVehicles : []
     };
 
     try {
@@ -99,11 +99,11 @@ export default function RegisterPage() {
           value={role}
           onChange={(e) => setRole(e.target.value)}
         >
-          <option value="USER">User</option>
-          <option value="DRIVER">Driver</option>
+          <option value="User">User</option>
+          <option value="Driver">Driver</option>
         </select>
 
-        {role === 'DRIVER' && (
+        {role === 'Driver' && (
           <div className="flex-wrap">
             {vehicleTypes.map(vehicle => (
               <label key={vehicle}>
